@@ -54,16 +54,16 @@ iex> Enum.any?(["foo", "bar", "hello"], fn(s) -> String.length(s) == 5 end)
 true
 ```
 
-### chunk_every/2
+### chunk_every
 
-Если требуется разбить коллекцию на меньшие группы, метод `chunk_every/4` — это то, что нужно:
+Если требуется разбить коллекцию на меньшие группы, метод `chunk_every/2` — это то, что нужно:
 
 ```elixir
 iex> Enum.chunk_every([1, 2, 3, 4, 5, 6], 2)
 [[1, 2], [3, 4], [5, 6]]
 ```
 
-Также есть несколько дополнительных опций, которые вы можете посмотреть в официальной документации: [`chunk_every/4`](https://hexdocs.pm/elixir/Enum.html#chunk_every/4).
+Также есть несколько дополнительных опций, которые вы можете посмотреть в официальной документации: [`chunk_every/2`](https://hexdocs.pm/elixir/Enum.html#chunk_every/2).
 
 ### chunk_by
 
@@ -191,7 +191,7 @@ iex> Enum.sort([%{:count => 4}, %{:count => 1}])
 [%{count: 1}, %{count: 4}]
 ```
 
-### uniq
+### uniq_by
 
 Для удаления дубликатов из перечислений можно использовать `uniq_by/2`:
 
